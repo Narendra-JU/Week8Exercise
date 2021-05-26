@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, etName.getText().toString()+",thank you for logging in ", Toast.LENGTH_SHORT).show();
+                if (etName.getText().length()>0 && etPassword.getText().length()>0){
+                    Toast.makeText(MainActivity.this, etName.getText().toString()+",thank you for logging in ", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Please enter both fields", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
