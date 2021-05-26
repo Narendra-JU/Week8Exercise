@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    EditText etName,etPassword;
+    EditText etName,etEmail,etCell,etContestDate,etContestTime;
     Button login,webview;
 
     @Override
@@ -18,17 +18,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         etName=findViewById(R.id.et_Name);
-        etPassword=findViewById(R.id.et_Password);
+        etEmail=findViewById(R.id.et_email);
+        etCell=findViewById(R.id.et_cell);
+        etContestDate=findViewById(R.id.et_contestDate);
+        etContestTime=findViewById(R.id.et_ContestTime);
+
         login=findViewById(R.id.buttonLogin);
         webview=findViewById(R.id.buttonWebview);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etName.getText().length()>0 && etPassword.getText().length()>0){
-                    Toast.makeText(MainActivity.this, etName.getText().toString()+",thank you for logging in ", Toast.LENGTH_SHORT).show();
+                if (etName.getText().length()>0){
+                    Toast.makeText(MainActivity.this, etName.getText().toString()+",thank you for submitting your data", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity.this, "Please enter both fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Please enter your Name", Toast.LENGTH_SHORT).show();
                 }
             }
         });

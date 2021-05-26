@@ -9,10 +9,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Name"
+        android:layout_marginTop="16dp"
+        android:text="Hello Surfers!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_Name"
         app:layout_constraintStart_toStartOf="@+id/et_Name"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,49 +25,77 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Name*"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/et_Name"
-        app:layout_constraintTop_toBottomOf="@+id/et_Name" />
-
-    <EditText
-        android:id="@+id/et_Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="@+id/et_Password"
-        app:layout_constraintStart_toStartOf="@+id/et_Password"
-        app:layout_constraintTop_toBottomOf="@+id/et_Password" />
+        android:layout_marginTop="8dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="@+id/et_ContestTime"
+        app:layout_constraintStart_toStartOf="@+id/et_ContestTime"
+        app:layout_constraintTop_toBottomOf="@+id/et_ContestTime" />
 
     <Button
         android:id="@+id/buttonWebview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="WebView"
+        android:text="Get Current Surf Conditions"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
         app:layout_constraintStart_toStartOf="@+id/buttonLogin"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/et_Name"
+        app:layout_constraintStart_toStartOf="@+id/et_Name"
+        app:layout_constraintTop_toBottomOf="@+id/et_Name" />
+
+    <EditText
+        android:id="@+id/et_cell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Cell"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <EditText
+        android:id="@+id/et_contestDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Contest Date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_cell"
+        app:layout_constraintStart_toStartOf="@+id/et_cell"
+        app:layout_constraintTop_toBottomOf="@+id/et_cell" />
+
+    <EditText
+        android:id="@+id/et_ContestTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Contest Time"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/et_contestDate"
+        app:layout_constraintStart_toStartOf="@+id/et_contestDate"
+        app:layout_constraintTop_toBottomOf="@+id/et_contestDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
